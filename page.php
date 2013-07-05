@@ -1,7 +1,7 @@
 <?php
 	$ar = array('index','terms','disclaimer','policy');
 	$c = isset($_REQUEST['c'])?$_REQUEST['c']:'index';
-	if(!in_array($c,$ar))
+	if(!in_array($c,$ar))	//protect access to files
 		$c = 'index';
 	$file = "/content/$c.php";
 ?>
